@@ -9,5 +9,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent { // properties of the component and methods (custom, lifecycle...)
-  title: string = 'Angular Task Tracker'; // recommended --> add types to properties and functions
 }
