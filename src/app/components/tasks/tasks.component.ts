@@ -17,4 +17,15 @@ export class TasksComponent implements OnInit {
     // this.tasks = this.taskService.getTasks(); usually you want to use observables dealing with asynchronous data from server; we just bringing file in
   }
 
+  deleteTask(task: Task) {
+    this.taskService
+      .deleteTask(task)
+      .subscribe(
+        () => (this.tasks = this.tasks.filter(t => t.id !== task.id)));
+  }
+
+  toggleReminder(task: Task) {
+    task.reminder = !task.reminder;
+      this.taskService.updateTaskReminder(task).subscribe();
+  }
 }
