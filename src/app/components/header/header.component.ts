@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs'
 })
 export class HeaderComponent implements OnInit {
   title: string = 'Angular Task Tracker'; // recommended --> add types to properties and functions
-  showAddTask: boolean = true;
+  showAddTask: boolean = false;
   subscription!: Subscription;
 
   constructor(private uiService: UiService) {
